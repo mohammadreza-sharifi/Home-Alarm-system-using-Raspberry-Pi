@@ -122,4 +122,6 @@ while True:
         #print("soundDetector detected")
     else:
         io.output(5,0)
+        io.output(7,0)
+        
 
