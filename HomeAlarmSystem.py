@@ -13,8 +13,8 @@ from email.mime.image import MIMEImage
 
 SMTP_SERVER = 'smtp.gmail.com' #Email Server (don't change!)
 SMTP_PORT = 587 #Server Port (don't change!)
-GMAIL_USERNAME = 'mamadsharifi1377@gmail.com' #change this to match your gmail account
-GMAIL_PASSWORD = 'howszywzekkfjyjy'  #change this to match your gmail password
+GMAIL_USERNAME = 'your email address' #change this to match your gmail account
+GMAIL_PASSWORD = 'app password for gmail account'  #change this to match your gmail password
 
 class Emailer:
     def sendmail(self, recipient, subject, content, image):
@@ -52,7 +52,7 @@ camera = PiCamera()
 
 api = KavenegarAPI('366C44766F67353374315A664431527432477138615153622F64696F6962334948444F696865586D33784D3D')
 params = { 'sender' : '1000596446', 'receptor': '09389978239', 'message' :'thief detected' }
-sound_params = { 'sender' : '1000596446', 'receptor': '09389978239', 'message' :'a sound detected!!!! , please check the cam' }
+sound_params = { 'sender' : '1000596446', 'receptor': 'your phone number', 'message' :'a sound detected!!!! , please check the cam' }
 #response = api.sms_send(input_params)
 
 #pir sensor connected to pin 3
@@ -88,7 +88,7 @@ def action(msg):
     elif command == "my photo":
         bot.sendPhoto(chat_id,photo=open('/home/pi/Desktop/telegrambot/botdetector.jpg','rb'))
 
-bot = telepot.Bot('1889712689:AAF45j3A5BthLfLwhMPQYJBmT5H0LHKV3OA')
+bot = telepot.Bot('bot token')
 bot.message_loop(action)
 
 while True:
