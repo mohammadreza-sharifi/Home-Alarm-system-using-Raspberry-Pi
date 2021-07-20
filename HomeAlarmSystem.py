@@ -73,7 +73,7 @@ def action(msg):
     chat_id = msg['chat']['id']
     command = msg['text']
     
-    print('got command: %s' % command)
+    #print('got command: %s' % command)
     
     if command == "Capture":
         camera.start_preview()
@@ -85,7 +85,7 @@ def action(msg):
     elif command == "Alarm photo":
         bot.sendPhoto(chat_id,photo=open('/home/pi/Desktop/telegrambot/detector.jpg','rb'))
         
-    elif command == "my photo":
+    elif command == "My photo":
         bot.sendPhoto(chat_id,photo=open('/home/pi/Desktop/telegrambot/botdetector.jpg','rb'))
 
 bot = telepot.Bot('bot token')
@@ -120,6 +120,7 @@ while True:
         io.output(5,1)
         io.output(7,1)
         #print("soundDetector detected")
+        
     else:
         io.output(5,0)
         io.output(7,0)
