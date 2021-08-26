@@ -50,7 +50,7 @@ sender = Emailer()
 
 camera = PiCamera()
 
-api = KavenegarAPI('366C44766F67353374315A664431527432477138615153622F64696F6962334948444F696865586D33784D3D')
+api = KavenegarAPI('')
 params = { 'sender' : '1000596446', 'receptor': '09389978239', 'message' :'thief detected' }
 sound_params = { 'sender' : '1000596446', 'receptor': 'your phone number', 'message' :'a sound detected!!!! , please check the cam' }
 #response = api.sms_send(input_params)
